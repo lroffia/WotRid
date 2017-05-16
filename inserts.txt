@@ -1,0 +1,48 @@
+INSERT DATA {
+	wot:SepaProtocol rdf:type wot:CommunicationProtocol.
+
+	wot:ArcesHouse rdf:type dul:PhysicalPlace.
+	wot:ArcesHouse td:hasName "ArcesHabitatHouse".
+	wot:CoordX rdf:type dul:PhysicalAttribute.
+	wot:CoordY rdf:type dul:PhysicalAttribute.
+
+	wot:RaspberryPi rdf:type td:Thing.
+	wot:RaspberryPi td:hasName "RidEmulator".
+	wot:RaspberryPi td:hasProperty wot:ConfigFile.
+	wot:RaspberryPi td:hasProperty wot:PositionData.
+	wot:RaspberryPi td:hasAction wot:UpdateConfig.
+	wot:RaspberryPi td:hasEvent wot:PositionDataUpdated.
+	wot:RaspberryPi dul:hasLocation wot:ArcesHouse.
+
+	wot:ConfigFile rdf:type td:Property.
+	wot:ConfigFile td:hasName "EmulatorConfigurationsJSON".
+	wot:ConfigFile td:hasStability "-1".
+	wot:ConfigFile td:isWritable "true".
+	wot:ConfigFile dul:hasDataValue "JSON_CONTENT".
+
+	wot:PositionData rdf:type td:Property.
+	wot:PositionData td:hasName "LastRFIDPosition".
+	wot:PositionData td:hasStability "1000".
+	wot:PositionData td:isWritable "false".
+	wot:PositionData td:hasValueType wot:CoordX.
+	wot:PositionData td:hasValueType wot:CoordY.
+	wot:CoordX dul:hasDataValue "Unknown".
+	wot:CoordY dul:hasDataValue "Unknown".
+
+	wot:UpdateConfig rdf:type td:Action.
+	wot:UpdateConfig td:hasName "UpdateEmulatorParameters".
+	wot:UpdateConfig wot:isAccessibleBy wot:SEPAProtocol.
+	wot:UpdateConfig td:forProperty wot:ConfigFile
+
+	wot:PositionDataUpdated rdf:type td:Event.
+	wot:PositionDataUpdated td:hasName "PositionChanged".
+	wot:PositionDataUpdated td:forProperty wot:PositionData.
+}
+
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+PREFIX td: <http://w3c.github.io/wot/w3c-wot-td-ontology.owl#>
+PREFIX wot: <http://www.arces.unibo.it/wot#>
+
+select ?p ?e ?a ?c where {OPTIONAL{wot:RaspberryPi td:hasProperty ?p}. OPTIONAL{wot:RaspberryPi td:hasEvent ?e}. OPTIONAL{wot:RaspberryPi td:hasAction ?a}. OPTIONAL{wot:RaspberryPi td:hasComponent ?c}}
