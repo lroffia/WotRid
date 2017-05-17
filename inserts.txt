@@ -5,6 +5,7 @@ INSERT DATA {
 	wot:ArcesHouse td:hasName "ArcesHabitatHouse".
 	wot:CoordX rdf:type dul:PhysicalAttribute.
 	wot:CoordY rdf:type dul:PhysicalAttribute.
+	wot:JSONContent rdf:type dul:InformationObject.
 
 	wot:RaspberryPi rdf:type td:Thing.
 	wot:RaspberryPi td:hasName "RidEmulator".
@@ -18,7 +19,8 @@ INSERT DATA {
 	wot:ConfigFile td:hasName "EmulatorConfigurationsJSON".
 	wot:ConfigFile td:hasStability "-1".
 	wot:ConfigFile td:isWritable "true".
-	wot:ConfigFile dul:hasDataValue "JSON_CONTENT".
+	wot:ConfigFile td:hasValueType wot:JSONContent.
+	wot:JSONContent dul:hasDataValue "JSON_CONTENT".
 
 	wot:PositionData rdf:type td:Property.
 	wot:PositionData td:hasName "LastRFIDPosition".
@@ -32,7 +34,7 @@ INSERT DATA {
 	wot:UpdateConfig rdf:type td:Action.
 	wot:UpdateConfig td:hasName "UpdateEmulatorParameters".
 	wot:UpdateConfig wot:isAccessibleBy wot:SEPAProtocol.
-	wot:UpdateConfig td:forProperty wot:ConfigFile
+	wot:UpdateConfig td:forProperty wot:ConfigFile.
 
 	wot:PositionDataUpdated rdf:type td:Event.
 	wot:PositionDataUpdated td:hasName "PositionChanged".
@@ -45,4 +47,31 @@ PREFIX dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
 PREFIX td: <http://w3c.github.io/wot/w3c-wot-td-ontology.owl#>
 PREFIX wot: <http://www.arces.unibo.it/wot#>
 
-select ?p ?e ?a ?c where {OPTIONAL{wot:RaspberryPi td:hasProperty ?p}. OPTIONAL{wot:RaspberryPi td:hasEvent ?e}. OPTIONAL{wot:RaspberryPi td:hasAction ?a}. OPTIONAL{wot:RaspberryPi td:hasComponent ?c}}
+select ?property ?pName ?pStability ?pWrite ?pValueType ?pDataValue 
+		?event ?eName ?eProperty 
+		?action ?aName ?aProtocol ?aProperty
+		?component where {
+  wot:RaspberryPi rdf:type td:Thing.
+  OPTIONAL {
+    wot:RaspberryPi td:hasProperty ?property.
+    ?property       td:hasName ?pName.
+    ?property       td:hasStability ?pStability.
+    ?property       td:isWritable ?pWrite.
+    ?property       td:hasValueType ?pValueType.
+    ?pValueType     dul:hasDataValue ?pDataValue
+  }.
+  OPTIONAL {
+    wot:RaspberryPi td:hasEvent ?event.
+    ?event          td:hasName ?eName.
+    ?event          td:forProperty ?eProperty
+  }.
+  OPTIONAL {
+     wot:RaspberryPi td:hasAction ?action.
+     ?action         td:hasName ?aName.
+     ?action         wot:isAccessibleBy ?aProtocol.
+     ?action         td:forProperty ?aProperty
+  }.
+  OPTIONAL {
+    wot:RaspberryPi wot:hasComponent ?component
+  }
+}
