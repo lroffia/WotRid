@@ -18,25 +18,7 @@
 	},
     "updates": {
     	"INIT_TD":{
-    		"sparql":"INSERT DATA {?thing rdf:type td:Thing. ?thing td:hasName ?thingName. ?thing td:hasProperty ?propertyUUID. ?thing td:hasAction ?actionUUID. ?thing td:hasEvent ?eventUUID. ?thing dul:hasLocation ?thingLocation. ?propertyUUID rdf:type td:Property. ?propertyUUID td:hasName ?propertyUUIDName. ?propertyUUID td:hasStability ?propertyUUIDStability. ?propertyUUID td:isWritable ?propertyUUIDWritability. ?propertyUUID td:hasValueType ?propertyUUIDValueType. ?propertyUUIDValueType dul:hasDataValue ?propertyUUIDValueTypeContent. ?actionUUID rdf:type td:Action. ?actionUUID td:hasName ?actionUUIDName. ?actionUUID wot:isAccessibleBy ?protocolUUID. ?actionUUID td:forProperty ?actionUUIDTargetProperty. ?eventUUID rdf:type td:Event. ?eventUUID td:hasName ?eventUUIDName. ?eventUUID td:forProperty ?eventUUIDTargetProperty}",
-    		"forcedBindings":{
-    			"thing":{"type":"uri","value":""},
-    			"thingName":{"type":"literal","value":""},
-    			"propertyUUID":{"type":"uri","value":""},
-    			"actionUUID":{"type":"uri","value":""},
-    			"eventUUID":{"type":"uri","value":""},
-    			"thingLocation":{"type":"uri","value":""},
-    			"propertyUUIDName":{"type":"literal","value":""},
-    			"propertyUUIDStability":{"type":"literal","value":""},
-    			"propertyUUIDWritability":{"type":"literal","value":""},
-    			"propertyUUIDValueType":{"type":"uri","value":""},
-    			"propertyUUIDValueTypeContent":{"type":"literal","value":""},
-    			"actionUUIDName":{"type":"literal","value":""},
-    			"actionUUIDprotocol":{"type":"uri","value":""},
-    			"actionUUIDTargetProperty":{"type":"uri","value":""},
-    			"eventUUIDName":{"type":"literal","value":""},
-    			"eventUUIDTargetProperty":{"type":"uri","value":""}
-    		}
+    		"sparql":"INSERT DATA {wot:SepaProtocol rdf:type wot:CommunicationProtocol.wot:ArcesHouse rdf:type dul:PhysicalPlace.wot:ArcesHouse td:hasName \"ArcesHabitatHouse\".wot:CoordX rdf:type dul:PhysicalAttribute.wot:CoordY rdf:type dul:PhysicalAttribute.wot:JSONContent rdf:type dul:InformationObject.wot:RaspberryPi rdf:type td:Thing.wot:RaspberryPi td:hasName \"RidEmulator\".wot:RaspberryPi td:hasProperty wot:ConfigFile.wot:RaspberryPi td:hasProperty wot:PositionData.wot:RaspberryPi td:hasAction wot:UpdateConfig.wot:RaspberryPi td:hasEvent wot:PositionDataUpdated.wot:RaspberryPi dul:hasLocation wot:ArcesHouse.wot:ConfigFile rdf:type td:Property.wot:ConfigFile td:hasName \"EmulatorConfigurationsJSON\".wot:ConfigFile td:hasStability \"-1\".wot:ConfigFile td:isWritable \"true\".wot:ConfigFile td:hasValueType wot:JSONContent.wot:JSONContent dul:hasDataValue \"JSON_CONTENT\".wot:PositionData rdf:type td:Property.wot:PositionData td:hasName \"LastRFIDPosition\".wot:PositionData td:hasStability \"1000\".wot:PositionData td:isWritable \"false\".wot:PositionData td:hasValueType wot:CoordX.wot:PositionData td:hasValueType wot:CoordY.wot:CoordX dul:hasDataValue \"Unknown\".wot:CoordY dul:hasDataValue \"Unknown\".wot:UpdateConfig rdf:type td:Action.wot:UpdateConfig td:hasName \"UpdateEmulatorParameters\".wot:UpdateConfig wot:isAccessibleBy wot:SEPAProtocol.wot:UpdateConfig td:forProperty wot:ConfigFile.wot:PositionDataUpdated rdf:type td:Event.wot:PositionDataUpdated td:hasName \"PositionChanged\".wot:PositionDataUpdated td:forProperty wot:PositionData.}"
     	},
     	"POST_NEW_EVENT":{
     		"sparql":"DELETE {?event wot:hasInstance ?oldInstance. ?oldInstance rdf:type wot:EventInstance. ?oldInstance wot:hasTimeStamp ?eOldTimeStamp} INSERT {?event wot:hasInstance ?newInstance. ?newInstance rdf:type wot:EventInstance. ?newInstance wot:hasTimeStamp ?eNewTimeStamp} WHERE {?event rdf:type td:Event. OPTIONAL{?event wot:hasInstance ?oldInstance. ?oldInstance rdf:type wot:EventInstance. ?oldInstance wot:hasTimeStamp ?eOldTimeStamp}}",
@@ -46,7 +28,7 @@
     			"eNewTimeStamp":{"type":"literal","value":""}
     		}
     	},
-    	"POST_ACTION_REQUEST_WITH_INPUT":{
+    	"POST_ACTION_REQUEST":{
     		"sparql":"DELETE {?action wot:hasInstance ?oldInstance. ?oldInstance rdf:type wot:ActionInstance. ?oldInstance wot:hasTimeStamp ?aOldTimeStamp. ?oldInstance td:hasInput ?oldInput. ?oldInput dul:hasDataValue ?oldValue} INSERT {?action wot:hasInstance ?newInstance. ?newInstance rdf:type wot:ActionInstance. ?newInstance wot:hasTimeStamp ?aNewTimeStamp. ?newInstance td:hasInput ?newInput. ?newInput dul:hasDataValue ?newValue} WHERE {?action rdf:type td:Action. OPTIONAL{?action wot:hasInstance ?oldInstance. ?oldInstance rdf:type wot:ActionInstance. ?oldInstance wot:hasTimeStamp ?aOldTimeStamp. ?oldInstance td:hasInput ?oldInput. ?oldInput dul:hasDataValue ?oldValue}}",
     		"forcedBindings":{
     			"action":{"type":"uri","value":""},
@@ -54,14 +36,6 @@
     			"aNewTimeStamp":{"type":"literal","value":""},
     			"newInput":{"type":"uri","value":""},
     			"newValue":{"type":"literal","value":""}
-    		}
-    	},
-    	"POST_ACTION_REQUEST_WITHOUT_INPUT":{
-    		"sparql":"DELETE {?action wot:hasInstance ?oldInstance. ?oldInstance rdf:type wot:ActionInstance. ?oldInstance wot:hasTimeStamp ?aOldTimeStamp} INSERT {?action wot:hasInstance ?newInstance. ?newInstance rdf:type wot:ActionInstance. ?newInstance wot:hasTimeStamp ?aNewTimeStamp} WHERE {?action rdf:type td:Action. OPTIONAL{?action wot:hasInstance ?oldInstance. ?oldInstance rdf:type wot:ActionInstance. ?oldInstance wot:hasTimeStamp ?aOldTimeStamp}}",
-    		"forcedBindings":{
-    			"action":{"type":"uri","value":""},
-    			"newInstance":{"type":"uri","value":""},
-    			"aNewTimeStamp":{"type":"literal","value":""}
     		}
     	}
     }, 
@@ -82,15 +56,9 @@
 			}
 		},
 		"SUBSCRIBE_TO_ACTION_OUTPUT":{
-			"sparql":"SELECT ?instance ?timeStamp ?aOutput ?outputValue WHERE {?action rdf:type td:Action. ?action wot:hasInstance ?instance. ?instance rdf:type wot:ActionInstance. ?instance wot:hasTimeStamp ?timeStamp. ?instance td:hasOutput ?aOutput. ?aOutput dul:hasDataValue ?outputValue}",
+			"sparql":"SELECT ?instance ?timeStamp ?aOutput ?outputValue WHERE {?action wot:hasInstance ?instance. ?instance rdf:type wot:ActionInstance. ?instance wot:hasTimeStamp ?timeStamp. ?instance td:hasOutput ?aOutput. ?aOutput dul:hasDataValue ?outputValue}",
 			"forcedBindings":{
 				"action":{"type":"uri","value":""}
-			}
-		},
-		"SUBSCRIBE_TO_EVENT":{
-			"sparql":"SELECT ?instance ?timeStamp WHERE {?event rdf:type td:Event. ?event wot:hasInstance ?instance. ?instance rdf:type wot:EventInstance. ?instance wot:hasTimeStamp ?timeStamp}",
-			"forcedBindings":{
-				"event":{"type":"uri","value":""}
 			}
 		}
     }

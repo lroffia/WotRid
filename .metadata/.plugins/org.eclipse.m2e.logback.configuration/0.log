@@ -96,3 +96,7 @@
 2017-05-17 17:32:41,245 [Worker-142] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
 2017-05-17 17:32:41,246 [Worker-142] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2017-05-17 17:32:41,247 [Worker-142] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources
+2017-05-17 18:23:57,691 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-17 18:23:57,691 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
+2017-05-17 18:23:57,692 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-17 18:23:57,692 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources
