@@ -1,0 +1,35 @@
+package wot.raspberry.rid;
+
+import java.io.File;
+import java.util.Scanner;
+
+import org.apache.log4j.Logger;
+import org.json.JSONObject;
+
+import net.sourceforge.argparse4j.ArgumentParsers;
+import net.sourceforge.argparse4j.inf.ArgumentParser;
+import net.sourceforge.argparse4j.inf.Namespace;
+
+public class App {
+	private static final String APP_TITLE = "RaspberryPiWoT";
+	private static final Logger logger = Logger.getLogger(APP_TITLE);
+	
+	private static final String EOF = "\\Z";
+	protected static String sap_file = "";
+	
+    public static void main(String[] args) {
+    	ArgumentParser parser = ArgumentParsers.newArgumentParser(APP_TITLE)
+    			.defaultHelp(true)
+    			.description("RaspberryPi WoT thing server");
+    	Namespace res = parser.parseArgsOrFail(args);
+    	
+    	logger.info("RaspberryPi WoT thing server is now running!");
+        
+    	Scanner sap_scanner = new Scanner(App.class.getClassLoader().getResource("generic_thing.sap").getFile());
+    	sap_file = sap_scanner.useDelimiter(EOF).next();
+    	System.out.println(sap_file);
+    	sap_scanner.close();
+    	JSONObject sap_json = new JSONObject(sap_file);
+    	
+    }
+}

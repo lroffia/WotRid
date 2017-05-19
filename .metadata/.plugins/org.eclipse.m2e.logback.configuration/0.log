@@ -109,3 +109,108 @@
 2017-05-19 11:35:37,860 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
 2017-05-19 11:35:37,861 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2017-05-19 11:35:37,861 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources
+2017-05-19 17:06:15,569 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:06:15,570 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
+2017-05-19 17:06:15,571 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:06:15,571 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources
+2017-05-19 17:07:41,714 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:07:41,715 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
+2017-05-19 17:07:41,716 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:07:41,716 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources
+2017-05-19 17:09:16,784 [Worker-107] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: wot.raspberry:rid:0.0.1-SNAPSHOT @ /home/francesco/Documents/Work/WotRid/rid/pom.xml.
+2017-05-19 17:09:17,122 [Worker-107] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/net/sourceforge/argparse4j/argparse4j/0.7.0/argparse4j-0.7.0.pom
+2017-05-19 17:09:17,166 [Worker-107] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/net/sourceforge/argparse4j/argparse4j/0.7.0/argparse4j-0.7.0.pom
+2017-05-19 17:09:17,204 [Worker-107] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/net/sourceforge/argparse4j/argparse4j/0.7.0/argparse4j-0.7.0.jar
+2017-05-19 17:09:17,332 [Worker-107] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/net/sourceforge/argparse4j/argparse4j/0.7.0/argparse4j-0.7.0.jar
+2017-05-19 17:09:17,782 [Worker-107] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:09:17,782 [Worker-107] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
+2017-05-19 17:09:17,784 [Worker-107] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:09:17,784 [Worker-107] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources
+2017-05-19 17:09:18,985 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:09:18,985 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
+2017-05-19 17:09:18,986 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:09:18,987 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources
+2017-05-19 17:24:04,490 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:24:04,490 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
+2017-05-19 17:24:04,491 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:24:04,491 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources
+2017-05-19 17:26:10,383 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:26:10,383 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
+2017-05-19 17:26:10,384 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:26:10,384 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources
+2017-05-19 17:27:53,570 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:27:53,570 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
+2017-05-19 17:27:53,571 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:27:53,571 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources
+2017-05-19 17:31:59,963 [Worker-109] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: wot.raspberry:rid:0.0.1-SNAPSHOT @ /home/francesco/Documents/Work/WotRid/rid/pom.xml.
+2017-05-19 17:32:00,090 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:32:00,090 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
+2017-05-19 17:32:00,091 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:32:00,091 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources
+2017-05-19 17:32:01,265 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:32:01,265 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
+2017-05-19 17:32:01,266 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:32:01,266 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources
+2017-05-19 17:42:04,860 [Worker-110] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:42:04,860 [Worker-110] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
+2017-05-19 17:42:04,861 [Worker-110] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:42:04,861 [Worker-110] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources
+2017-05-19 17:42:35,354 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:42:35,355 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
+2017-05-19 17:42:35,356 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:42:35,356 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources
+2017-05-19 17:46:04,508 [Worker-115] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: wot.raspberry:rid:0.0.1-SNAPSHOT @ /home/francesco/Documents/Work/WotRid/rid/pom.xml.
+2017-05-19 17:46:04,778 [Worker-115] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/directory/studio/org.apache.commons.io/2.4/org.apache.commons.io-2.4.pom
+2017-05-19 17:46:04,813 [Worker-115] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/directory/studio/org.apache.commons.io/2.4/org.apache.commons.io-2.4.pom
+2017-05-19 17:46:04,850 [Worker-115] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/directory/studio/parent-libraries/2.0.0.v20130125/parent-libraries-2.0.0.v20130125.pom
+2017-05-19 17:46:04,885 [Worker-115] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/directory/studio/parent-libraries/2.0.0.v20130125/parent-libraries-2.0.0.v20130125.pom
+2017-05-19 17:46:04,926 [Worker-115] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/directory/studio/parent/2.0.0.v20130125/parent-2.0.0.v20130125.pom
+2017-05-19 17:46:05,044 [Worker-115] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/directory/studio/parent/2.0.0.v20130125/parent-2.0.0.v20130125.pom
+2017-05-19 17:46:05,086 [Worker-115] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/directory/project/project/27/project-27.pom
+2017-05-19 17:46:05,125 [Worker-115] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/directory/project/project/27/project-27.pom
+2017-05-19 17:46:05,209 [Worker-115] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/directory/studio/org.apache.commons.io/2.4/org.apache.commons.io-2.4.jar
+2017-05-19 17:46:05,290 [Worker-115] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/directory/studio/org.apache.commons.io/2.4/org.apache.commons.io-2.4.jar
+2017-05-19 17:46:05,582 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:46:05,582 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
+2017-05-19 17:46:05,584 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:46:05,584 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources
+2017-05-19 17:46:06,679 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:46:06,680 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
+2017-05-19 17:46:06,681 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:46:06,681 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources
+2017-05-19 17:46:27,171 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:46:27,171 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
+2017-05-19 17:46:27,172 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:46:27,172 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources
+2017-05-19 17:48:23,763 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:48:23,764 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
+2017-05-19 17:48:23,764 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:48:23,764 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources
+2017-05-19 17:53:25,900 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:53:25,900 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
+2017-05-19 17:53:25,901 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:53:25,901 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources
+2017-05-19 17:53:35,699 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:53:35,700 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
+2017-05-19 17:53:35,701 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:53:35,701 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources
+2017-05-19 17:53:50,312 [Worker-117] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:53:50,312 [Worker-117] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
+2017-05-19 17:53:50,312 [Worker-117] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:53:50,312 [Worker-117] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources
+2017-05-19 17:54:13,060 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:54:13,061 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
+2017-05-19 17:54:13,062 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:54:13,062 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources
+2017-05-19 17:57:06,852 [Worker-117] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:57:06,852 [Worker-117] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
+2017-05-19 17:57:06,853 [Worker-117] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:57:06,853 [Worker-117] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources
+2017-05-19 17:57:41,217 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:57:41,218 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
+2017-05-19 17:57:41,218 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:57:41,218 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources
+2017-05-19 17:58:00,931 [Worker-120] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:58:00,931 [Worker-120] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
+2017-05-19 17:58:00,932 [Worker-120] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 17:58:00,932 [Worker-120] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources

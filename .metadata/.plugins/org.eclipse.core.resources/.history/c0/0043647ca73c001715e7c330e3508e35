@@ -1,0 +1,19 @@
+package wot.raspberry.rid;
+
+import org.apache.log4j.Logger;
+
+import net.sourceforge.argparse4j.ArgumentParsers;
+import net.sourceforge.argparse4j.inf.ArgumentParser;
+
+public class App {
+	private static final String APP_TITLE = "RaspberryPiWoT";
+	private static final Logger logger = Logger.getLogger(APP_TITLE);
+	
+    public static void main(String[] args) {
+    	ArgumentParser parser = ArgumentParsers.newArgumentParser(APP_TITLE)
+    			.defaultHelp(true)
+    			.description("RaspberryPi WoT thing server");
+    	logger.info("RaspberryPi WoT thing server is now running!");
+        
+    }
+}
