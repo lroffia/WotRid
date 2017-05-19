@@ -100,3 +100,12 @@
 2017-05-17 18:23:57,691 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
 2017-05-17 18:23:57,692 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2017-05-17 18:23:57,692 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources
+2017-05-19 10:52:25,310 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-05-19 11:16:22,721 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 11:16:22,722 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
+2017-05-19 11:16:22,723 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 11:16:22,724 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources
+2017-05-19 11:35:37,860 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 11:35:37,860 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/main/resources
+2017-05-19 11:35:37,861 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 11:35:37,861 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/francesco/Documents/Work/WotRid/rid/src/test/resources

@@ -18,7 +18,7 @@
 	},
     "updates": {
     	"INIT_TD":{
-    		"sparql":"INSERT {?thing rdf:type td:Thing. ?thing td:hasName ?thingName. ?thing dul:hasLocation ?thingLocation} WHERE {?thingLocation rdf:type dul:PhysicalPlace}",
+    		"sparql":"INSERT DATA {?thing rdf:type td:Thing. ?thing td:hasName ?thingName. ?thing dul:hasLocation ?thingLocation}",
     		"forcedBindings":{
     			"thing":{"type":"uri","value":""},
     			"thingName":{"type":"literal","value":""},
@@ -38,11 +38,13 @@
     		}
     	},
     	"ADD_ACTION":{
-    		"sparql":"INSERT DATA {?thing rdf:type td:Thing. ?thing td:hasAction ?actionUUID. ?actionUUID rdf:type td:Action. ?actionUUID td:hasName ?actionUUIDName}",
+    		"sparql":"INSERT DATA {?thing rdf:type td:Thing. ?thing td:hasAction ?actionUUID. ?actionUUID rdf:type td:Action. ?actionUUID td:hasName ?actionUUIDName. ?actionUUID wot:isAccessibleBy ?protocolUUID. ?actionUUID td:forProperty ?actionUUIDTargetProperty}",
     		"forcedBindings":{
     			"thing":{"type":"uri","value":""},
     			"actionUUID":{"type":"uri","value":""},
-    			"actionUUIDName":{"type":"literal","value":""}
+    			"actionUUIDName":{"type":"literal","value":""},
+    			"actionUUIDprotocol":{"type":"uri","value":""},
+    			"actionUUIDTargetProperty":{"type":"uri","value":""}
     		}
     	},
     	"ADD_EVENT":{
@@ -54,17 +56,10 @@
     		}
     	},
     	"APPEND_TARGET_PROPERTY_TO_ACTION_OR_EVENT":{
-    		"sparql":"INSERT {?action_OR_event td:forProperty ?targetPropertyUUID} WHERE {{{?action_OR_event rdf:type td:Action} UNION {?action_OR_event rdf:type td:Event}}. ?targetPropertyUUID rdf:type td:Property}",
+    		"sparql":"INSERT {?action_OR_event td:forProperty ?targetPropertyUUID} WHERE {{?action_OR_event rdf:type td:Action} UNION {?action_OR_event rdf:type td:Event}. ?targetPropertyUUID rdf:type td:Property}",
     		"forcedBindings":{
     			"action_OR_event":{"type":"uri","value":""},
     			"targetPropertyUUID":{"type":"uri","value":""}
-    		}
-    	},
-    	"APPEND_ACCESS_PROTOCOL_TO_ACTION":{
-    		"sparql":"INSERT {?actionUUID wot:isAccessibleBy ?protocolUUID} WHERE {?actionUUID rdf:type td:Action. ?protocolUUID rdf:type wot:CommunicationProtocol}",
-    		"forcedBindings":{
-    			"actionUUID":{"type":"uri","value":""},
-    			"protocolUUID":{"type":"uri","value":""}
     		}
     	},
     	"POST_NEW_EVENT":{
@@ -99,7 +94,7 @@
 		    "sparql":"SELECT ?s WHERE { ?s rdf:type td:Thing }"
 		},
 		"GET_THING_DESCRIPTION":{
-			"sparql":"SELECT ?place ?property ?pName ?pStability ?pWrite ?pValueType ?pDataValue ?event ?eName ?eProperty ?action ?aName ?aProtocol ?aProperty	?component WHERE {?thing rdf:type td:Thing. ?thing dul:hasLocation ?place. OPTIONAL {?thing td:hasProperty ?property. ?property td:hasName ?pName. ?property td:hasStability ?pStability. ?property td:isWritable ?pWrite. ?property td:hasValueType ?pValueType. ?pValueType dul:hasDataValue ?pDataValue}. OPTIONAL {?thing td:hasEvent ?event. ?event td:hasName ?eName. ?event td:forProperty ?eProperty}. OPTIONAL {?thing td:hasAction ?action. ?action td:hasName ?aName. ?action wot:isAccessibleBy ?aProtocol. ?action td:forProperty ?aProperty}. OPTIONAL {?thing wot:hasComponent ?component}}",
+			"sparql":"SELECT ?property ?pName ?pStability ?pWrite ?pValueType ?pDataValue ?event ?eName ?eProperty ?action ?aName ?aProtocol ?aProperty	?component WHERE {?thing rdf:type td:Thing. OPTIONAL {?thing td:hasProperty ?property. ?property td:hasName ?pName. ?property td:hasStability ?pStability. ?property td:isWritable ?pWrite. ?property td:hasValueType ?pValueType. ?pValueType dul:hasDataValue ?pDataValue}. OPTIONAL {?thing td:hasEvent ?event. ?event td:hasName ?eName. ?event td:forProperty ?eProperty}. OPTIONAL {?thing td:hasAction ?action. ?action td:hasName ?aName. ?action wot:isAccessibleBy ?aProtocol. ?action td:forProperty ?aProperty}. OPTIONAL {?thing wot:hasComponent ?component}}",
 			"forcedBindings": {
 				"thing":{"type":"uri","value":""}
 			}
