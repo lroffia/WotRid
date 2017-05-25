@@ -53,7 +53,7 @@
     		"sparql":"INSERT {?thing td:hasAction ?actionUUID. 
     			?actionUUID rdf:type td:Action. 
     			?actionUUID td:hasName ?actionUUIDName}
-    			WHERE {?thing rdf:type td:Thing}",
+    			WHERE {?thing rdf:type td:Action}",
     		"forcedBindings":{
     			"thing":{"type":"uri","value":""},
     			"actionUUID":{"type":"uri","value":""},
@@ -102,32 +102,7 @@
     			"protocolUUID":{"type":"uri","value":""}
     		}
     	},
-    	"POST_NEW_EVENT_WITH_OUTPUT":{
-    		"sparql":"DELETE {?event wot:hasInstance ?oldInstance. 
-    		?oldInstance rdf:type wot:EventInstance. 
-    		?oldInstance wot:hasTimeStamp ?eOldTimeStamp.
-    		?oldInstance td:hasOutput ?eOldOutput.
-    		?eOldOutput dul:hasDataValue ?oldValue} 
-    		INSERT {?event wot:hasInstance ?newInstance. 
-    		?newInstance rdf:type wot:EventInstance. 
-    		?newInstance wot:hasTimeStamp ?eNewTimeStamp.
-    		?newInstance td:hasOutput ?eNewOutput.
-    		?eNewOutput dul:hasDataValue ?newValue} 
-    		WHERE {?event rdf:type td:Event. 
-    		OPTIONAL {?event wot:hasInstance ?oldInstance. 
-    		?oldInstance rdf:type wot:EventInstance. 
-    		?oldInstance wot:hasTimeStamp ?eOldTimeStamp.
-    		?oldInstance td:hasOutput ?eOldOutput.
-    		?eOldOutput dul:hasDataValue ?oldValue}}",
-    		"forcedBindings":{
-    			"event":{"type":"uri","value":""},
-    			"newInstance":{"type":"uri","value":""},
-    			"eNewTimeStamp":{"type":"literal","value":""},
-    			"eNewOutput":{"type":"uri","value":""},
-    			"newValue":{"type":"literal","value":""}
-    		}
-    	},
-    	"POST_NEW_EVENT_WITHOUT_OUTPUT":{
+    	"POST_NEW_EVENT":{
     		"sparql":"DELETE {?event wot:hasInstance ?oldInstance. 
     		?oldInstance rdf:type wot:EventInstance. 
     		?oldInstance wot:hasTimeStamp ?eOldTimeStamp} 
@@ -189,91 +164,30 @@
     }, 
     "subscribes": {
 		"GET_ALL_THINGS":{
-		    "sparql":"SELECT ?s WHERE { ?s rdf:type td:Thing. ?s wot:isDiscoverable \"true\" }"
+		    "sparql":"SELECT ?s WHERE { ?s rdf:type td:Thing }"
 		},
 		"GET_THING_DESCRIPTION":{
-			"sparql":"SELECT ?place ?property ?pName ?pStability ?pWrite ?pValueType 
-			?pDataValue ?event ?eName ?eProperty ?action ?aName ?aProtocol ?aProperty 
-			?component WHERE {?thing rdf:type td:Thing. 
-			?thing wot:isDiscoverable \"true\".
-			?thing dul:hasLocation ?place. 
-			OPTIONAL {?thing td:hasProperty ?property. 
-			?property td:hasName ?pName. 
-			?property td:hasStability ?pStability. 
-			?property td:isWritable ?pWrite. 
-			?property td:hasValueType ?pValueType. 
-			?pValueType dul:hasDataValue ?pDataValue}. 
-			OPTIONAL {?thing td:hasEvent ?event. 
-			?event td:hasName ?eName. 
-			?event td:forProperty ?eProperty}. 
-			OPTIONAL {?thing td:hasAction ?action. 
-			?action td:hasName ?aName. 
-			?action wot:isAccessibleBy ?aProtocol. 
-			?action td:forProperty ?aProperty}. 
-			OPTIONAL {?thing wot:hasComponent ?component.
-			?component rdf:type td:Thing.
-			?component wot:isDiscoverable \"true\"}}",
+			"sparql":"SELECT ?place ?property ?pName ?pStability ?pWrite ?pValueType ?pDataValue ?event ?eName ?eProperty ?action ?aName ?aProtocol ?aProperty	?component WHERE {?thing rdf:type td:Thing. ?thing dul:hasLocation ?place. OPTIONAL {?thing td:hasProperty ?property. ?property td:hasName ?pName. ?property td:hasStability ?pStability. ?property td:isWritable ?pWrite. ?property td:hasValueType ?pValueType. ?pValueType dul:hasDataValue ?pDataValue}. OPTIONAL {?thing td:hasEvent ?event. ?event td:hasName ?eName. ?event td:forProperty ?eProperty}. OPTIONAL {?thing td:hasAction ?action. ?action td:hasName ?aName. ?action wot:isAccessibleBy ?aProtocol. ?action td:forProperty ?aProperty}. OPTIONAL {?thing wot:hasComponent ?component}}",
 			"forcedBindings": {
 				"thing":{"type":"uri","value":""}
 			}
 		},
 		"SUBSCRIBE_TO_ACTION_REQUEST":{
-			"sparql":"SELECT ?instance ?input ?value 
-			WHERE {?action rdf:type td:Action. 
-			?action wot:hasInstance ?instance. 
-			?instance rdf:type wot:ActionInstance. 
-			OPTIONAL {?instance td:hasInput ?input. ?input dul:hasDataValue ?value}}",
+			"sparql":"SELECT ?instance ?input ?value WHERE {?action rdf:type td:Action. ?action wot:hasInstance ?instance. ?instance rdf:type wot:ActionInstance. ?instance td:hasInput ?input. ?input dul:hasDataValue ?value}",
 			"forcedBindings": {
 				"action":{"type":"uri","value":""}
 			}
 		},
 		"SUBSCRIBE_TO_ACTION_OUTPUT":{
-			"sparql":"SELECT ?timeStamp ?aOutput ?outputValue 
-			WHERE {?instance rdf:type wot:ActionInstance. 
-			?instance wot:hasTimeStamp ?timeStamp. 
-			?instance td:hasOutput ?aOutput. 
-			?aOutput dul:hasDataValue ?outputValue}",
+			"sparql":"SELECT ?instance ?timeStamp ?aOutput ?outputValue WHERE {?action rdf:type td:Action. ?action wot:hasInstance ?instance. ?instance rdf:type wot:ActionInstance. ?instance wot:hasTimeStamp ?timeStamp. ?instance td:hasOutput ?aOutput. ?aOutput dul:hasDataValue ?outputValue}",
 			"forcedBindings":{
-				"instance":{"type":"uri","value":""}
+				"action":{"type":"uri","value":""}
 			}
 		},
 		"SUBSCRIBE_TO_EVENT":{
-			"sparql":"SELECT ?instance ?timeStamp ?eOutput ?outputValue
-			WHERE {?event rdf:type td:Event. 
-			?event wot:hasInstance ?instance. 
-			?instance rdf:type wot:EventInstance. 
-			?instance wot:hasTimeStamp ?timeStamp.
-			OPTIONAL {?instance td:hasOutput ?eOutput.
-			?eOutput dul:hasDataValue ?outputValue}}",
+			"sparql":"SELECT ?instance ?timeStamp WHERE {?event rdf:type td:Event. ?event wot:hasInstance ?instance. ?instance rdf:type wot:EventInstance. ?instance wot:hasTimeStamp ?timeStamp}",
 			"forcedBindings":{
 				"event":{"type":"uri","value":""}
-			}
-		},
-		"GET_ALL_EVENTS":{
-			"sparql":"SELECT ?thing ?event ?eName
-			WHERE { ?thing rdf:type td:Thing.
-			?thing wot:isDiscoverable \"true\".
-			?thing td:hasEvent ?event. 
-			?event td:hasName ?eName}",
-			"forcedBindings":{
-			}
-		},
-		"GET_ALL_ACTIONS":{
-			"sparql":"SELECT ?thing ?action ?aName
-			WHERE { ?thing rdf:type td:Thing.
-			?thing wot:isDiscoverable \"true\".
-			?thing td:hasAction ?action. 
-			?action td:hasName ?aName}",
-			"forcedBindings":{
-			}
-		},
-		"GET_ALL_PROPERTIES":{
-			"sparql":"SELECT ?thing ?property ?pName
-			WHERE { ?thing rdf:type td:Thing.
-			?thing wot:isDiscoverable \"true\".
-			?thing td:hasProperty ?property. 
-			?property td:hasName ?pName}",
-			"forcedBindings":{
 			}
 		}
     }
