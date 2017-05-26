@@ -10,4 +10,10 @@
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="org.apache.commons.io.IOUtils"/>
+<fullyQualifiedTypeName name="arces.unibo.SEPA.application.Aggregator"/>
+<fullyQualifiedTypeName name="arces.unibo.SEPA.client.pattern.Aggregator"/>
+<fullyQualifiedTypeName name="org.apache.logging.log4j.Logger"/>
+<fullyQualifiedTypeName name="org.apache.logging.log4j.LogManager"/>
+<fullyQualifiedTypeName name="arces.unibo.SEPA.client.pattern.Producer"/>
+<fullyQualifiedTypeName name="net.sourceforge.argparse4j.impl.Arguments"/>
 </qualifiedTypeNameHistroy>
