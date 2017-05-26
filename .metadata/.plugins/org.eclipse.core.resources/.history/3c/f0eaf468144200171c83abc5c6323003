@@ -1,0 +1,25 @@
+{
+    "parameters" : { 
+    	"path":"sparql",
+    	"secure_path":"secure/sparql",
+		"subscribeSecurePort":9443,
+		"subscribePort":9000,
+		"updateSecurePort":8443, 
+		"updatePort":8000,
+		"host":"www.vaimee.com"
+	},
+    "namespaces" : { 
+    	"wot":"http://www.arces.unibo.it/wot#",
+		"rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"dul":"http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#",
+		"ire":"http://w3c.github.io/wot/w3c-wot-td-ire.owl#",
+		"rdfs":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"td":"http://w3c.github.io/wot/w3c-wot-td-ontology.owl#"
+	},
+    "updates": {
+    	
+    }, 
+    "subscribes": {
+		
+    }
+}	

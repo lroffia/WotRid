@@ -1,0 +1,95 @@
+package wot.raspberry.rid;
+
+import java.io.IOException;
+
+import org.apache.commons.io.IOUtils;
+import org.apache.log4j.Logger;
+import org.json.JSONObject;
+
+import arces.unibo.SEPA.client.pattern.Aggregator;
+import arces.unibo.SEPA.client.pattern.ApplicationProfile;
+import arces.unibo.SEPA.commons.SPARQL.ARBindingsResults;
+import arces.unibo.SEPA.commons.SPARQL.BindingsResults;
+import arces.unibo.SEPA.commons.response.ErrorResponse;
+import net.sourceforge.argparse4j.ArgumentParsers;
+import net.sourceforge.argparse4j.inf.ArgumentParser;
+import net.sourceforge.argparse4j.inf.Namespace;
+
+public class App extends Aggregator {
+	
+	private static final String APP_TITLE = "RaspberryPiWoT";
+	private static final Logger logger = Logger.getLogger(APP_TITLE);
+	
+	private static final String EOF = "\\Z";
+	protected static String sap_file = "";
+	
+	private static final ApplicationProfile generic_thing = new ApplicationProfile();
+	
+	
+	public App(ApplicationProfile appProfile, String subscribeID, String updateID) {
+		super(appProfile, subscribeID, updateID);
+		// TODO Auto-generated constructor stub
+	}
+
+    public static void main(String[] args) {
+    	ArgumentParser parser = ArgumentParsers.newArgumentParser(APP_TITLE)
+    			.defaultHelp(true)
+    			.description("RaspberryPi WoT thing server");
+    	Namespace res = parser.parseArgsOrFail(args);
+    	
+    	logger.info("RaspberryPi WoT thing server is now running!");
+        
+    	try {
+    		System.out.println(App.class.getClassLoader().getResourceAsStream("generic_thing.sap"));
+    		sap_file = IOUtils.toString(App.class.getClassLoader().getResourceAsStream("generic_thing.sap"));
+    	} catch (IOException e) {
+    		e.printStackTrace();
+    	}
+
+    	JSONObject sap_json = new JSONObject(sap_file.replace('\n', ' '));
+    	JSONObject parameters = (JSONObject) sap_json.get("parameters");
+    	System.out.println("Parameters detected:\n"+parameters.toString().replace(',', '\n').replaceAll("[\"{}]", "").replace(":", ":\t"));
+    
+    	//generic_thing.load(fileName)
+    }
+    
+    private static void post_app_context() {
+    	
+    }
+
+	@Override
+	public void notify(ARBindingsResults arg0, String arg1, Integer arg2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void notifyAdded(BindingsResults arg0, String arg1, Integer arg2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void notifyRemoved(BindingsResults arg0, String arg1, Integer arg2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onSubscribe(BindingsResults arg0, String arg1) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void brokenSubscription() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onError(ErrorResponse arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+}

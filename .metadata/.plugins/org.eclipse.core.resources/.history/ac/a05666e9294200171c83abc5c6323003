@@ -1,0 +1,32 @@
+{
+	"parameters": {
+		"path": "sparql",
+		"secure_path": "secure/sparql",
+		"subscribeSecurePort": 9443,
+		"subscribePort": 9000,
+		"updateSecurePort": 8443,
+		"updatePort": 8000,
+		"host": "wot.arces.unibo.it"
+	},
+	"namespaces": {
+		"wot": "http://www.arces.unibo.it/wot#",
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"dul": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#",
+		"ire": "http://w3c.github.io/wot/w3c-wot-td-ire.owl#",
+		"rdfs": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"td": "http://w3c.github.io/wot/w3c-wot-td-ontology.owl#"
+	},
+	"updates": {
+		"INSERT_CONTEXT": {
+			"sparql": "INSERT DATA {wot:SepaProtocol rdf:type wot:CommunicationProtocol.     			wot:Arces rdf:type dul:PhysicalPlace. 				wot:Arces td:hasName \"ArcesToffano\". 				wot:StringContent rdf:type dul:InformationObject.  				wot:RaspberryPi rdf:type td:Thing. 				wot:RaspberryPi wot:isDiscoverable \"true\". 				wot:RaspberryPi td:hasName \"Raspberry\". 				wot:RaspberryPi td:hasProperty wot:WrittenString. 				wot:RaspberryPi td:hasAction wot:WriteString. 				wot:RaspberryPi td:hasEvent wot:StringEvent. 				wot:RaspberryPi dul:hasLocation wot:Arces.  				wot:WrittenString rdf:type td:Property. 				wot:WrittenString td:hasName \"16x2String\". 				wot:WrittenString td:hasStability \"-1\". 				wot:WrittenString td:isWritable \"true\". 				wot:WrittenString td:hasValueType wot:StringContent. 				wot:StringContent dul:hasDataValue \"Hello World!\".  				wot:WriteString rdf:type td:Action. 				wot:WriteString td:hasName \"Write on 16x2\". 				wot:WriteString wot:isAccessibleBy wot:SEPAProtocol. 				wot:WriteString td:forProperty wot:WrittenString.  				wot:StringEvent rdf:type td:Event. 				wot:StringEvent td:hasName \"16x2 Overflow\". 				wot:StringEvent td:forProperty wot:WrittenString }"
+		},
+		"INSERT_SMALL_CONTEXT": {
+			"sparql": "INSERT DATA {wot:SepaProtocol rdf:type wot:CommunicationProtocol. wot:Arces rdf:type dul:PhysicalPlace. wot:Arces td:hasName \"ArcesToffano\".wot:StringContent rdf:type dul:InformationObject }"
+		},
+		"CLEAR_ALL":{
+			"sparql": "DELETE {?a ?b ?c} WHERE {?a ?b ?c}"
+		}
+	},
+	"subscribes": {
+	}
+}
