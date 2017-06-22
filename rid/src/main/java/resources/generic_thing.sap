@@ -1,13 +1,20 @@
 {
-    "parameters" : { 
-    	"path":"sparql",
-    	"secure_path":"secure/sparql",
-		"subscribeSecurePort":9443,
-		"subscribePort":9000,
-		"updateSecurePort":8443, 
-		"updatePort":8000,
-		"host":"www.vaimee.com"
-	},
+   "parameters": {
+		"host": "wot.arces.unibo.it",
+		"ports": {
+			"http": 8000,
+			"https": 8443,
+			"ws": 9000,
+			"wss": 9443
+		},
+		"paths": {
+			"query": "/query",
+			"update": "/update",
+			"subscribe": "/subscribe",
+			"register": "/oauth/register",
+			"tokenRequest": "/oauth/token",
+			"securePath": "/secure"
+		},
     "namespaces" : { 
     	"wot":"http://www.arces.unibo.it/wot#",
 		"rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
